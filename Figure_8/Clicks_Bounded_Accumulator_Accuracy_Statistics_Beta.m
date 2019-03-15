@@ -1,4 +1,4 @@
-% Used to generate Fig 7C in manuscript.
+% Used to generate Fig 8C in manuscript.
 clear
 
 r_m = 30; beta = 1:10;
