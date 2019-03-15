@@ -1,3 +1,5 @@
+% Used to generate Fig. 6E in manuscript.
+
 y = -7:0.01:7;
 m = 10; lambda = 5; lambda_1 = -15;
 
