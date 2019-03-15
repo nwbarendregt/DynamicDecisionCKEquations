@@ -1,4 +1,4 @@
-% Used to generate Fig 3E,F in manuscript.
+% Used to generate Fig 3E in manuscript.
 clear
 
 b = 10; t_0 = 0; t_f = 1; m = [5 50];
