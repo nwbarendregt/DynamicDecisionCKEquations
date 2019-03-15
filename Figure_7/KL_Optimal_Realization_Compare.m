@@ -1,3 +1,5 @@
+% Used to generate Fig. 7A in manuscript.
+
 clear
 
 b = 15; t_0 = 0; t_f = 1; m = 50;
