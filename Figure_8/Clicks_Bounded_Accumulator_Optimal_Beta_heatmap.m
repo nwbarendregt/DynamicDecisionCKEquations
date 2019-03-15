@@ -1,4 +1,4 @@
-% Used to generate Fig 7D in manuscript.
+% Used to generate Fig 8D in manuscript.
 
 clear
 
