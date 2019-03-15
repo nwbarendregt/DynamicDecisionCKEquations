@@ -1,4 +1,4 @@
-% Used to generate Fig. 7A from the manuscript.
+% Used to generate Fig. 8A from the manuscript.
 clear
 
 t_0 = 0; dt = 0.01; t_f = 1; t = t_0:dt:t_f;
