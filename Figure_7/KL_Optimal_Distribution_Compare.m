@@ -1,4 +1,4 @@
-% Used to generate Fig 3A in manuscript.
+% Used to generate Fig. 7B in manuscript.
 clear
 
 b = 15; t_0 = 0; t_f = 1; m = 50;
@@ -25,6 +25,3 @@ plot(y,p_lin);
 plot(y,p_cub);
 yyaxis right
 plot(y,p_bound);
-legend({'Norm','Lin','Cub','Bound'})
-legend('boxoff')
-box off
