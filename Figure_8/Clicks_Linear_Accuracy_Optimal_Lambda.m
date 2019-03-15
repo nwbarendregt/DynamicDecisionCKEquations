@@ -1,4 +1,4 @@
-% Used to generate Fig. 7C from the manuscript.
+% Used to generate Fig. 7B from the manuscript.
 clear
 
 t_0 = 0; dt = 0.05; t_f = 1; t = t_0:dt:t_f;
