@@ -1,3 +1,4 @@
+% Used to generate Fig. 2D in manuscript.
 clear
 
 t_0 = 0; t_f = 1.5; dt = 0.01; t = t_0:dt:t_f;
