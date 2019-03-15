@@ -1,4 +1,4 @@
-% Used to generate data for Fig 7A,B,C in manuscript.
+% Used to generate Fig. 7C,D in manuscript.
 clear
 
 b = 15; t_0 = 0; t_f = 1; dy = 0.05; dt = 0.05;
@@ -15,14 +15,14 @@ for i = 1:length(m)
     for j = 1:length(lambda_1)
         for k = 1:length(lambda_2)
             [~,p_c] = Cubic_Accuracy_Interrogation(m(i),lambda_1(j),lambda_2(k),h_o,h_e,p_0,t_0,dt,t_f,b,dy);
-            p_c = abs(p_c(end,:));
-            KL_cub(i,j,k) = KLDiv(p_n,p_c);
+            p_c = abs(p_c(end,:)); p_c(p_c==0) = eps;
+            KL_cub(i,j,k) = sum(p_n.*log(p_n./p_l));
         end
     end
     for j = 1:length(beta)
         [~,p_b] = Bounded_Accumulator_Accuracy_Interrogation(m(i),beta(j),dy);
         p_b = [eps*ones(1,(length(-b:dy:b)-length(p_b))/2) p_b eps*ones(1,(length(-b:dy:b)-length(p_b))/2)];
-        KL_bound(i,j) = KLDiv(p_n,p_b);
+        KL_bound(i,j) = sum(p_n.*log(p_n./p_l));
     end
     disp(i)
 end
@@ -53,7 +53,7 @@ for i = 1:length(m)
     Cub_opt(:,i) = [L1(Cub_opt(1,i)) L2(Cub_opt(2,i))];
 end
 
-% save('KL_Opt_Tuning_Data');
+save('KL_Opt_Tuning_Data');
 
 figure
 plot(m,Min_KL_bound)
