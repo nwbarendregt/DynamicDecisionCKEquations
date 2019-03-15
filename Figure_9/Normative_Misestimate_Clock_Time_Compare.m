@@ -1,3 +1,4 @@
+% Used to generate Fig. 9 in manuscript
 clear
 
 b = 10; t_0 = 0; t_f = 1; m = 5;
@@ -30,3 +31,16 @@ for i = 1:length(nsamp)
     [~,I] = max(acc_MC(i,:)); max_MC(i) = h_o(I);
     Err(i) = norm(acc_CK-acc_MC(i,:));
 end
+
+figure
+plot(h_o,acc_CK)
+hold on
+plot(h_o,acc_MC)
+
+figure
+yyaxis left
+loglog(nsamp,time_CK*ones(1,length(nsamp)))
+hold on
+loglog(nsamp,time_MC)
+yyaxis right
+semilogx(nsamp,Err)
